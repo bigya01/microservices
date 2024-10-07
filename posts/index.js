@@ -3,10 +3,12 @@ const { randomBytes } = require('crypto');
 // randomBytes is used to create ids to assign to each post after created
 const bodyParser = require('body-parser'); // to parse json data sent by user 
 
+const cors = require ('cors');
 
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 const posts = {};  // to store every post we create
 
